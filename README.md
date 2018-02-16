@@ -14,9 +14,9 @@ Ultimately, this page should:
 **Disclaimer:** All content on this page is provided on a strictly informational basis. The contributor(s) to this page cannot assume any responsibility, in any manner whatsoever, for the use readers make of the information presented herein, or the devices, systems, or calculations resulting therefrom. It is the responsibility of the reader to determine if the data and information provided are in agreement with the latest design allowables.
 
 # <a name="rationale"></a>Rationale
-Engineers frequently have to effectively communicate analysis and findings to their colleagues, managers, and clients. A problem occurs when the engineer fails to document their process in a meaningful and accessible way. As programmers quickly learn, the person who is most likely to be confused when reading your code is your future self — especially when you neglected to include comments and docstrings. This page is a first step in documenting my most frequently used analysis tools, and hopefully serve as a template for you to do the same.
+Engineers frequently have to communicate analysis and findings to their colleagues, managers, and clients. A problem occurs when the engineer fails to communicate effectively for the intended audience, and also when he or she doesn't document their process in a meaningful and accessible way for later reference. As programmers quickly learn, the person who's most likely to be confused when reading your code is your future self. This page is a first step in documenting analysis tools that I frequently use, and hopefully serve as a template for you to do the same.
 
-Another, more aerospace-specific problem exists for professional engineers and students. While there are many resources for aerospace engineering, much of it is scattered about disparate places around the net (e.g. [NASA NTRS](https://ntrs.nasa.gov/search.jsp), countless threads on [Eng-Tips](http://www.eng-tips.com/)) and around the world. The aerospace industry in particular has a lot of "tribal" knowledge that becomes lost when veteran engineers, mechanics, and fabricators retire or pass away without disseminating their decades of experience and knowledge to the next generation. There's simply no replacement for this knowledge, and very little of it makes it into modern aerospace texts, let alone the lecture hall.
+Another, more aerospace-specific problem exists for professional engineers and students. While there are many resources for aerospace engineering, much of it is scattered about disparate places around the net (e.g. countless threads on [Eng-Tips](http://www.eng-tips.com/)) and around the world. The aerospace industry in particular has a lot of "tribal" knowledge that becomes lost when veteran engineers, mechanics, and fabricators retire or pass away without disseminating their decades of experience and knowledge to the next generation. There's simply no replacement for this knowledge, and very little of it makes it into modern aerospace texts, let alone the lecture hall. Even when this knowledge is documented in design manuals, they are no replacement for an experienced mentor.
 
 For students, this is problematic when trying to attain the requisite knowledge to enter a very limited and competitive job market. Some of these resources will address the *"Why didn't I learn this in school?"* moments that new engineers will almost certainly encounter during their formative years. Hopefully these resources will accelerate that learning process and save young engineers from committing serious but preventable mistakes.
 
@@ -27,11 +27,17 @@ For students, this is problematic when trying to attain the requisite knowledge 
 # <a name="toc"></a>Table of Contents
 <details open><summary><sup>Hide</sup>/<sub>Show</sub></summary><br/>
 
-[Symbols & Abbreviations](#symbols)
+- [Symbols & Abbreviations](#symbols)
 
-[Universal References](#u-references)
+- [Universal References](#u-references)
 
-[Python References](#python-references)
+- [Python References](#python-references)
+  - [Beginner-Novice](#beginner-novice)
+    - [Why Python?](#why-python)
+    - [Learning Python for the First Time](#learning-python-for-the-first-time)
+  - [Intermediate-Advanced](#intermediate-advanced)
+
+- [](#)
 
 [⇪ Top](#top)
 </details>
@@ -49,8 +55,11 @@ FEA|Finite Element Analysis
 MIL|Military; see MS
 MMPDS|Metallic Materials Properties Development and Standardization; see [Universal References](#u-references)
 MS|Military Standard
+PEP|Python Enhancement Proposal; e.g. [PEP8](https://www.python.org/dev/peps/pep-0008/)
 
 </details>
+
+---
 
 ## <a name="u-references"></a>Universal References
 These references are universal in that they are frequently used by aerospace stress engineers to conduct basic & advanced analysis. While FEA is a powerful analysis tool, it comes with a lot of costs and overhead that isn't practical or necessary for a lot of engineering problems. In many cases a problem can be solved using a straightforward analysis process out of one of these texts, and if necessary, automated using a Python script. A common glib in engineering goes: *"Someone a lot smarter than me figured this out 50 years ago."* — which is really just another way of saying, *"Don't re-invent the wheel."*
@@ -73,6 +82,9 @@ Niu was the Senior R&D Engineer at Lockheed Martin and Stress Engineer at Boeing
 ### <a name="roark"></a>"Roark's Formulas for Stress and Strain" by Warren C. Young & Richard G. Budynas
 Known better under his pen name Raymond J. Roark, Professor Young draws upon more than four decades of academic research in mechanics of materials and mechanical engineering to produce one of the most commonly referenced engineering books of all time. While not aerospace-specific, *Roark's* is invaluable for the analysis and detail design of many types of mechanical loading problems.
 
+### <a name="hoerner"></a>"Fluid-Dynamic Life" and "Fluid-Dynamic Drag" by Sighard F. Hoerner
+Following World War 2, the aerodynamics field exploded with pioneers and researchers like Dr. Hoerner leading the way. In the same way that Professor Bruhn's text is go-to reference for the analysis of flight vehicle structures, Hoerner's books are absolutely fundamental for aerodynamic analysis of all kinds.
+
 ### <a name="ntrs"></a>[NASA Technical Reports Server (NTRS)](https://ntrs.nasa.gov/search.jsp)
 NTRS contains a vast wealth of information dating back to the early days of NASA, when they were known as the National Advisory Committee for Aeronautics (NACA) from 1915 to 1958. Major topics of interest include both aeronautics and aerospace research, such as NACA airfoil test data; aerodynamic test data; flight vehicle design manuals; and design manuals on rocket staging, propellants, etc.
 
@@ -84,16 +96,24 @@ Documents of interest on various topics:
 * [NASA-RP-1228: Fastener Design Manual by Richard T. Barrett](https://ntrs.nasa.gov/search.jsp?R=19900009424)
 * [NASA-SP-8007: Buckling of thin-walled circular cylinders by Peterson-Seide-Weingarten](https://ntrs.nasa.gov/search.jsp?R=19690013955)
 
+---
+
 ## <a name="python-references"></a>Python References
 
 This section assumes that you have zero programming knowledge. Your goal here is to go through these references in order, and get from your first `Hello world!` program to what Chris Moffitt calls the ["plateau of productivity"](http://pbpython.com/plateau-of-productivity.html).
 
 Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while. But after a bit of a learning curve, I can attest that it has certainly been worth all the effort, not only in time saved, but also in the sense of accomplishment.
 
-### Beginner-Novice
+### <a name="why-python"></a>Why Python?
+* It's easy to learn and a great first coding language
+* You can go from learning to productive within a few weeks
+* It's a mature language with many libraries and tons of documentation (Python 1.0 came out in 1994!)
+* It has many applications, from basic scripting to data analysis to machine learning
+
+### <a name="beginner-novice"></a>Beginner-Novice
 Whether you're learning to code for the first time or simply adding Python to your list of languages, these resources will get you up and running quickly.
 
-#### <a name="learning-python"></a>Learning Python for the First Time
+#### <a name="learning-python-for-the-first-time"></a>Learning Python for the First Time
 There are five main resources recommended by the Python community, all of them free:
 
 1. [Automate the Boring Stuff with Python](http://inventwithpython.com/#automate) by Al Sweigart
@@ -110,6 +130,15 @@ I like "Automate the Boring Stuff with Python" the best, which took me about 50 
 
 The only resource I recommend avoiding is "Learn Python the Hard Way" by Zed Shaw, mainly because it's outdated.
 
+#### <a name="code-like-a-pythonista"></a>[Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+As you learn Python, you'll start to understand why styling and whitespace are important. David Goodger's "Code Like a Pythonista" and similarly [PEP8](https://www.python.org/dev/peps/pep-0008/) are important companions to have so that you can learn to write nice, readable code as you get better at Python. While you can afford to skip over some bits of Python as a language to learn at a later time, you can never afford to write crappy code because it is the antithesis to saving time.
+
+As MIT's [SICP](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-7.html) wisely stated:
+
+> \[...] a computer language is not just a way of getting a computer to perform operations but rather \[...] it is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute.
+
+Or as [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) simply says: __Readability counts.__
+
 #### <a name="pbpython"></a>[Practical Business Python](http://pbpython.com/)
 PB Python is a monthly-ish blog by Chris Moffitt ([@chris1610](https://github.com/chris1610/pbpython)) that covers applications for Python that can be used in an everyday business setting. This is probably the best resource around for accelerating your Python skills from writing dinky Python exercise programs to programs that will save you time. It's also a fantastic resource for getting started with `pandas` (Python Data Analysis Library) for the first time, and bridging the gap between Excel and Python.
 
@@ -117,14 +146,16 @@ My recommended approach is to head into the [PB Python Archive](http://pbpython.
 
 **Note:** For planning purposes, each PBpy exercise can take 1-2 hours to get through, depending on the topic and your skill level.
 
-#### <a name="learning-python-mark-lutz"></a>"Learning Python, 5th Ed." by Mark Lutz
+#### <a name="learning-python"></a>"Learning Python, 5th Ed." by Mark Lutz
 This text is perhaps the most comprehensive resource for learning how Python works, and covers some advanced topics that aren't in any of the [Learning Python for the First Time](#learning-python) resources, such as interfacing Python with C/C++. This is of particular interest for engineers that work with embedded systems that require C/C++, or anyone that desires the computational power of C/C++ while keeping the ease of development in Python.
 
 Since this book is an absolute behemoth of over 1,600 pages, I recommend it mainly as a companion reference for looking up concepts & examples that aren't explained thoroughly by any of the free resources. For even more exercises, Mark Lutz made his [live course materials](http://learning-python.com/training) available for free.
 
 #### <a name="python-in-a-nutshell"></a>"Python in a Nutshell" by Martelli-Ravenscroft-Holden
 
-### Intermediate-Advanced
+---
+
+### <a name="intermediate-advanced"></a>Intermediate-Advanced
 By the time you've completed some medium to large programming projects on your own, you may need some more resources to reach the next skill level. These books will help correct some of the bad habits you've undoubtedly picked up while learning Python, and fill in any knowledge gaps while also delving into more advanced programming methods.
 
 Note that unlike the Beginner resources, each of these textbooks has something different to offer.
@@ -140,3 +171,5 @@ Note that unlike the Beginner resources, each of these textbooks has something d
 #### <a name="python-cookbook"></a>"Python Cookbook" by David Beazley and Brian K. Jones
 
 #### <a name="hackers-guide-to-python"></a>"The Hacker's Guide to Python" by Julien Danjou
+
+---
