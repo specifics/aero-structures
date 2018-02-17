@@ -2,7 +2,7 @@
 Resources for analyzing aircraft structures for aerospace engineers.
 
 # <a name="scope"></a>Scope
-This page provides resources for the analysis aircraft structures using classical methods developed from prominent engineering minds such as Elmer F. Bruhn, Michael Niu, Warren Young (aka Raymond J. Roark), and Sighard F. Hoerner. FEA methods are not covered. This page also includes methods to port these methods into Python 3, allowing engineers become more effective at their job by rolling their own code and interface with other engineers in a professional environment.
+This page provides resources for the analysis aircraft structures using classical methods developed from prominent engineering minds such as Elmer F. Bruhn, Michael Niu, Warren Young (aka Raymond J. Roark), and Sighard F. Hoerner. FEA methods are not covered. This page also includes applications of these analysis methods in Python.
 
 Ultimately, this page should:
 * Be a portal for non-FEA structural analysis methods used in the aerospace industry
@@ -14,7 +14,12 @@ Ultimately, this page should:
 **Disclaimer:** All content on this page is provided on a strictly informational basis. The contributor(s) to this page cannot assume any responsibility, in any manner whatsoever, for the use readers make of the information presented herein, or the devices, systems, or calculations resulting therefrom. It is the responsibility of the reader to determine if the data and information provided are in agreement with the latest design allowables.
 
 # <a name="rationale"></a>Rationale
-Engineers frequently have to communicate analysis and findings to their colleagues, managers, and clients. A problem occurs when the engineer fails to communicate effectively for the intended audience, and also when he or she doesn't document their process in a meaningful and accessible way for later reference. As programmers quickly learn, the person who's most likely to be confused when reading your code is your future self. This page is a first step in documenting analysis tools that I frequently use, and hopefully serve as a template for you to do the same.
+Engineers frequently face two different, but interrelated problems in the professional world:
+
+1. Communicate analysis and findings to their colleagues, managers, and clients in a way that can be understood by the intended audience.
+1. Documenting the numerous analyses, processes, and tools used throughout a project in a meaningful and accessible way for later reference.
+
+There have been a number of times where I completed a project, and start another similar project months or even years later — but the old project file is disorganized at best, often missing key pieces of information that aren't immediately obvious. This means I have to spend a significant amount of time re-developing a process to ensure that all the relevant parts are in place to succeed in the new project. As projects scale in complexity, this _mobilization cost_ becomes greater, and it is worthwhile to take steps to try and reduce this cost. This page is a first step in documenting analysis tools that I frequently use, and hopefully serve as a template for you to do the same.
 
 Another, more aerospace-specific problem exists for professional engineers and students. While there are many resources for aerospace engineering, much of it is scattered about disparate places around the net (e.g. countless threads on [Eng-Tips](http://www.eng-tips.com/)) and around the world. The aerospace industry in particular has a lot of "tribal" knowledge that becomes lost when veteran engineers, mechanics, and fabricators retire or pass away without disseminating their decades of experience and knowledge to the next generation. There's simply no replacement for this knowledge, and very little of it makes it into modern aerospace texts, let alone the lecture hall. Even when this knowledge is documented in design manuals, they are no replacement for an experienced mentor.
 
@@ -100,21 +105,20 @@ Documents of interest on various topics:
 
 ## <a name="python-references"></a>Python References
 
-This section assumes that you have zero programming knowledge. Your goal here is to go through these references in order, and get from your first `Hello world!` program to what Chris Moffitt calls the ["plateau of productivity"](http://pbpython.com/plateau-of-productivity.html).
+This section assumes that you have zero programming knowledge. Your goal here is to go from your first `Hello world!` program to what Chris Moffitt calls the ["plateau of productivity"](http://pbpython.com/plateau-of-productivity.html).
 
 Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while. But after a bit of a learning curve, I can attest that it has certainly been worth all the effort, not only in time saved, but also in the sense of accomplishment.
 
 ### <a name="why-python"></a>Why Python?
-* It's easy to learn and a great first coding language
-* You can go from learning to productive within a few weeks
-* It's a mature language with many libraries and tons of documentation (Python 1.0 came out in 1994!)
-* It has many applications, from basic scripting to data analysis to machine learning
+* It's easy to learn and a great first coding language. You can go from learning to productive within a few weeks!
+* It's a mature language with many libraries and tons of documentation. Python 1.0.0 came out in 1994!
+* It has many applications, from basic scripting to data analysis to machine learning.
 
 ### <a name="beginner-novice"></a>Beginner-Novice
-Whether you're learning to code for the first time or simply adding Python to your list of languages, these resources will get you up and running quickly.
+Whether you're learning to code for the first time or simply adding Python to your list of languages, these resources will get you up and running quickly. The very first thing you'll want to do is download the [Anaconda](https://www.anaconda.com/download/) distribution of Python 3, and start up _Spyder_ or _QtConsole_.
 
 #### <a name="learning-python-for-the-first-time"></a>Learning Python for the First Time
-There are five main resources recommended by the Python community, all of them free:
+There are five main resources recommended by the Python community, all of them free. You only need to choose one and stick with it, but as we are all blessed with different minds, you'll want to try several to see which is more suited to your learning style. As my electrical engineering professor Keith Garfield told me, *"Find a voice that speaks to you."*
 
 1. [Automate the Boring Stuff with Python](http://inventwithpython.com/#automate) by Al Sweigart
 1. [Dive into Python 3](http://www.diveintopython3.net/) by Mark Pilgrim
@@ -122,9 +126,7 @@ There are five main resources recommended by the Python community, all of them f
 1. [Python 101](http://python101.pythonlibrary.org/index.html) ([ebook version here](https://leanpub.com/python_101)) by Michael Driscoll
 1. [The Official Python Tutorial](https://docs.python.org/3/tutorial/index.html) by the Python Software Foundation
 
-You only need to choose one and stick with it, but as we are all blessed with different minds, you'll want to try several to see which is more suited to your learning style. As my electrical engineering professor Keith Garfield wisely told me, *"Find a voice that speaks to you."*
-
-All of them cover the basics of Python, but don't completely overlap in topics covered. The main difference is that 1 & 2 get you off the ground faster, letting you create practical programs very quickly, while 3-5 take longer to get through, but are more comprehensive and focus on helping you build a solid foundation in Python. It's completely fine to go with one of the faster resources and fill in the gaps later when you can accommodate it.
+All of these cover the basics of Python, but don't completely overlap in topics covered. The main difference is that 1 & 2 get you off the ground faster, letting you create practical programs very quickly, while 3-5 take longer to get through, but are more comprehensive and focus on helping you build a solid foundation in Python. It's completely fine to go with one of the faster resources and fill in the gaps later when you can accommodate it.
 
 I like "Automate the Boring Stuff with Python" the best, which took me about 50 hours (and numerous tries) to get through. At some point you'll start to get the itch to write a 'real' program. That's perfectly normal, and I encourage you to start applying what you've learned by coding small personal projects. Finding problems and solving them with Python is the best way to get productive fast, rather than spending all your time reading and watching videos.
 
@@ -140,7 +142,7 @@ As MIT's [SICP](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-7.html) wi
 Or as [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) simply says: __Readability counts.__
 
 #### <a name="pbpython"></a>[Practical Business Python](http://pbpython.com/)
-PB Python is a monthly-ish blog by Chris Moffitt ([@chris1610](https://github.com/chris1610/pbpython)) that covers applications for Python that can be used in an everyday business setting. This is probably the best resource around for accelerating your Python skills from writing dinky Python exercise programs to programs that will save you time. It's also a fantastic resource for getting started with `pandas` (Python Data Analysis Library) for the first time, and bridging the gap between Excel and Python.
+PB Python is a monthly-ish blog by Chris Moffitt ([@chris1610](https://github.com/chris1610/pbpython)) that covers applications for Python that can be used in an everyday business setting. This is probably the best resource around for accelerating your Python skills from writing Python exercise programs to programs that will save you time. It's also a fantastic resource for getting started with `pandas` (Python Data Analysis Library) for the first time, and bridging the gap between Excel and Python.
 
 My recommended approach is to head into the [PB Python Archive](http://pbpython.com/archives.html) and start with the first article from 5 October 2014, ["Using Sets for Data Analysis"](http://pbpython.com/data-analysis-with-sets.html). As you move forward, go through each article in chronological order. Chris does a fantastic job of building upon his previous articles!
 
