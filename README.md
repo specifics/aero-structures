@@ -14,16 +14,16 @@ Ultimately, this page should:
 **Disclaimer:** All content on this page is provided on a strictly informational basis. The contributor(s) to this page cannot assume any responsibility, in any manner whatsoever, for the use readers make of the information presented herein, or the devices, systems, or calculations resulting therefrom. It is the responsibility of the reader to determine if the data and information provided are in agreement with the latest design allowables.
 
 # <a name="rationale"></a>Rationale
-Engineers frequently face two different, but interrelated problems in the professional world:
+Engineers frequently face two different, but interrelated challenges in the professional world:
 
-1. Communicate analysis and findings to their colleagues, managers, and clients in a way that can be understood by the intended audience.
+1. Communicate analysis and findings to their colleagues, managers, and clients in a way that effectively conveys information to the intended audience.
 1. Documenting the numerous analyses, processes, and tools used throughout a project in a meaningful and accessible way for later reference.
 
-There have been a number of times where I completed a project, and start another similar project months or even years later — but the old project file is disorganized at best, often missing key pieces of information that aren't immediately obvious. This means I have to spend a significant amount of time re-developing a process to ensure that all the relevant parts are in place to succeed in the new project. As projects scale in complexity, this _mobilization cost_ becomes greater, and it is worthwhile to take steps to try and reduce this cost. This page is a first step in documenting analysis tools that I frequently use, and hopefully serve as a template for you to do the same.
+There have been a number of times where I completed a project, and some months or even years later started another, similar project. When I refer to the old project file, I find that it's disorganized at best, often missing key pieces of information that aren't immediately obvious. This means I have to spend a significant amount of time re-developing processes and tools to ensure that all the relevant parts are in place to succeed in the new project. As projects scale in complexity, this _mobilization cost_ becomes greater, and it's worthwhile to take steps to try and reduce this cost. This page is a first step in documenting analysis tools that I frequently use, and hopefully serve as a template for you to do the same.
 
-Another, more aerospace-specific problem exists for professional engineers and students. While there are many resources for aerospace engineering, much of it is scattered about disparate places around the net (e.g. countless threads on [Eng-Tips](http://www.eng-tips.com/)) and around the world. The aerospace industry in particular has a lot of "tribal" knowledge that becomes lost when veteran engineers, mechanics, and fabricators retire or pass away without disseminating their decades of experience and knowledge to the next generation. There's simply no replacement for this knowledge, and very little of it makes it into modern aerospace texts, let alone the lecture hall. Even when this knowledge is documented in design manuals, they are no replacement for an experienced mentor.
+New graduates will certainly encounter moments where they ask themselves *"Why didn't I learn this in school?"* during their formative years. My hope is that some of these resources will accelerate the learning process, and potentially save inexperienced engineers from committing serious but preventable mistakes.
 
-For students, this is problematic when trying to attain the requisite knowledge to enter a very limited and competitive job market. Some of these resources will address the *"Why didn't I learn this in school?"* moments that new engineers will almost certainly encounter during their formative years. Hopefully these resources will accelerate that learning process and save young engineers from committing serious but preventable mistakes.
+Another, more aerospace-specific problem has been happening for several decades now. While there are many resources for aerospace engineering, much of it is scattered about disparate places around the net (e.g. countless threads on [Eng-Tips](http://www.eng-tips.com/)) and around the world. The aerospace industry has a lot of "tribal" knowledge that becomes lost when veteran engineers, mechanics, and fabricators retire or pass away without disseminating their decades of experience and knowledge to the next generation. There's simply no replacement for this knowledge, and very little of it makes it into modern aerospace texts, let alone university lecture halls. Even when this knowledge is documented in company design manuals, in the end they are only manuals and do not effectively replace an experienced mentor.
 
 [⇪ Top](#top)
 
@@ -51,7 +51,7 @@ For students, this is problematic when trying to attain the requisite knowledge 
 
 ## <a name="symbols"></a>Symbols & Abbreviations
 
-<details open><summary><sup>Hide</sup>/<sub>Show</sub></summary><br/>
+<details close><summary><sup>Show</sup>/<sub>Hide</sub></summary><br/>
 
 Nomenclature|Definition
 :---:|:---
@@ -67,7 +67,7 @@ PEP|Python Enhancement Proposal; e.g. [PEP8](https://www.python.org/dev/peps/pep
 ---
 
 ## <a name="u-references"></a>Universal References
-These references are universal in that they are frequently used by aerospace stress engineers to conduct basic & advanced analysis. While FEA is a powerful analysis tool, it comes with a lot of costs and overhead that isn't practical or necessary for a lot of engineering problems. In many cases a problem can be solved using a straightforward analysis process out of one of these texts, and if necessary, automated using a Python script. A common glib in engineering goes: *"Someone a lot smarter than me figured this out 50 years ago."* — which is really just another way of saying, *"Don't re-invent the wheel."*
+These references are universal in that they are frequently used by aerospace design engineers to conduct analysis during the preliminary and detail design phases. While FEA is a powerful analysis tool, it comes with a lot of costs and overhead that isn't practical or necessary for a lot of engineering problems. In many cases a problem can be solved using a straightforward analysis process out of one of these texts, and if necessary, automated using a Python script. A common glib in engineering goes: *"Someone a lot smarter than me figured this out 50 years ago."* — which is really just another way of saying *"Don't re-invent the wheel."*
 
 **Students beware:** Most of these materials are not suitable for learning course material for the first time.
 
@@ -93,7 +93,7 @@ Following World War 2, the aerodynamics field exploded with pioneers and researc
 ### <a name="ntrs"></a>[NASA Technical Reports Server (NTRS)](https://ntrs.nasa.gov/search.jsp)
 NTRS contains a vast wealth of information dating back to the early days of NASA, when they were known as the National Advisory Committee for Aeronautics (NACA) from 1915 to 1958. Major topics of interest include both aeronautics and aerospace research, such as NACA airfoil test data; aerodynamic test data; flight vehicle design manuals; and design manuals on rocket staging, propellants, etc.
 
-Since the amount of data is so vast, the recommended usage for NTRS is to have a very specific query on a design or analysis problem — there's a decent chance that someone at NASA has already done the legwork for you. An example of a good query is `buckling thin shell` and `double slotted flap`. I also suggest filtering the `Document Type` to only contain "Technical Reports", which will only show NASA design manuals and technical memos.
+When searching NTRS, I recommend having a very specific query on a design or analysis problem — there's a decent chance that someone at NASA has already done the legwork for you. An example of a good query is `buckling thin shell` and `double slotted flap`. I also suggest filtering the `Document Type` to only contain "Technical Reports", which will only show NASA design manuals and technical memos.
 
 Documents of interest on various topics:
 
@@ -107,18 +107,18 @@ Documents of interest on various topics:
 
 This section assumes that you have zero programming knowledge. Your goal here is to go from your first `Hello world!` program to what Chris Moffitt calls the ["plateau of productivity"](http://pbpython.com/plateau-of-productivity.html).
 
-Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while. But after a bit of a learning curve, I can attest that it has certainly been worth all the effort, not only in time saved, but also in the sense of accomplishment.
+Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while. But after a bit of a learning curve, I can attest that it has certainly been worth all the effort, not only in time Python has saved me, but also in a sense of accomplishment.
 
 ### <a name="why-python"></a>Why Python?
-* It's easy to learn and a great first coding language. You can go from learning to productive within a few weeks!
+* It's easy to learn and a great first coding language. You can start start programming your own projects within a few weeks!
 * It's a mature language with many libraries and tons of documentation. Python 1.0.0 came out in 1994!
 * It has many applications, from basic scripting to data analysis to machine learning.
 
 ### <a name="beginner-novice"></a>Beginner-Novice
-Whether you're learning to code for the first time or simply adding Python to your list of languages, these resources will get you up and running quickly. The very first thing you'll want to do is download the [Anaconda](https://www.anaconda.com/download/) distribution of Python 3, and start up _Spyder_ or _QtConsole_.
+Whether you're learning to code for the first time or simply adding Python to your list of languages, these resources will get you up and running quickly. The very first thing you'll want to do is download the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3, and start up an IDE of your choice for one of the resources below. I recommend _Jupyterlab_.
 
 #### <a name="learning-python-for-the-first-time"></a>Learning Python for the First Time
-There are five main resources recommended by the Python community, all of them free. You only need to choose one and stick with it, but as we are all blessed with different minds, you'll want to try several to see which is more suited to your learning style. As my electrical engineering professor Keith Garfield told me, *"Find a voice that speaks to you."*
+There are five main resources recommended by the Python community, all of them free. You only need to choose one and stick with it, but as we are all blessed with different minds, you'll want to try several to see which is more suited to your learning style. As my electrical engineering professor once told me, *"Find a voice that speaks to you."*
 
 1. [Automate the Boring Stuff with Python](http://inventwithpython.com/#automate) by Al Sweigart
 1. [Dive into Python 3](http://www.diveintopython3.net/) by Mark Pilgrim
@@ -126,14 +126,14 @@ There are five main resources recommended by the Python community, all of them f
 1. [Python 101](http://python101.pythonlibrary.org/index.html) ([ebook version here](https://leanpub.com/python_101)) by Michael Driscoll
 1. [The Official Python Tutorial](https://docs.python.org/3/tutorial/index.html) by the Python Software Foundation
 
-All of these cover the basics of Python, but don't completely overlap in topics covered. The main difference is that 1 & 2 get you off the ground faster, letting you create practical programs very quickly, while 3-5 take longer to get through, but are more comprehensive and focus on helping you build a solid foundation in Python. It's completely fine to go with one of the faster resources and fill in the gaps later when you can accommodate it.
+All of these cover the basics of Python, but don't completely overlap in topics covered. The main difference is that 1 & 2 get you off the ground faster, giving you the knowledge to start writing practical programs very quickly, while 3-5 take longer to get through, but are more comprehensive and focus on helping you build a solid foundation in Python. It's completely fine to go with one of the faster resources and fill in the gaps later when you can accommodate it.
 
-I like "Automate the Boring Stuff with Python" the best, which took me about 50 hours (and numerous tries) to get through. At some point you'll start to get the itch to write a 'real' program. That's perfectly normal, and I encourage you to start applying what you've learned by coding small personal projects. Finding problems and solving them with Python is the best way to get productive fast, rather than spending all your time reading and watching videos.
+I like "Automate the Boring Stuff with Python" the best, which took me about 50 hours (and numerous tries) to get through. At some point you'll start to get the itch to write real programs — that's perfectly normal, and I encourage you to start applying what you've learned by writing your own scripts and programs. Finding problems and solving them with Python is the best way to get productive fast, rather than spending all your time reading and watching videos.
 
 The only resource I recommend avoiding is "Learn Python the Hard Way" by Zed Shaw, mainly because it's outdated.
 
 #### <a name="code-like-a-pythonista"></a>[Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
-As you learn Python, you'll start to understand why styling and whitespace are important. David Goodger's "Code Like a Pythonista" and similarly [PEP8](https://www.python.org/dev/peps/pep-0008/) are important companions to have so that you can learn to write nice, readable code as you get better at Python. While you can afford to skip over some bits of Python as a language to learn at a later time, you can never afford to write crappy code because it is the antithesis to saving time.
+As you learn Python, you'll start to understand why styling and whitespace are important. David Goodger's "Code Like a Pythonista" and similarly [PEP8](https://www.python.org/dev/peps/pep-0008/) are important companions to have so that you learn to write readable code as you get better at Python. While you can afford to skip over some bits of Python as a language to learn at a later time, you can never afford to write crappy code because it is the antithesis to saving time.
 
 As MIT's [SICP](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-7.html) wisely stated:
 
@@ -142,14 +142,14 @@ As MIT's [SICP](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-7.html) wi
 Or as [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) simply says: __Readability counts.__
 
 #### <a name="pbpython"></a>[Practical Business Python](http://pbpython.com/)
-PB Python is a monthly-ish blog by Chris Moffitt ([@chris1610](https://github.com/chris1610/pbpython)) that covers applications for Python that can be used in an everyday business setting. This is probably the best resource around for accelerating your Python skills from writing Python exercise programs to programs that will save you time. It's also a fantastic resource for getting started with `pandas` (Python Data Analysis Library) for the first time, and bridging the gap between Excel and Python.
+PB Python is a monthly-ish blog by Chris Moffitt ([@chris1610](https://github.com/chris1610/pbpython)) that covers applications for Python for frequently-used business tasks. This is the best resource I've found for contextualizing how Python programs can be used in an everyday business setting. It's also a fantastic resource for getting started with `pandas` (Python Data Analysis Library) for the first time, and bridging the gap between MS Office applications (e.g. Excel, Word) and Python.
 
-My recommended approach is to head into the [PB Python Archive](http://pbpython.com/archives.html) and start with the first article from 5 October 2014, ["Using Sets for Data Analysis"](http://pbpython.com/data-analysis-with-sets.html). As you move forward, go through each article in chronological order. Chris does a fantastic job of building upon his previous articles!
+Head into the [PB Python Archive](http://pbpython.com/archives.html) and start with the article from 5 October 2014, ["Using Sets for Data Analysis"](http://pbpython.com/data-analysis-with-sets.html). As you move forward, go through the articles in chronological order. Chris does a fantastic job of building upon each one until you have a formidable set of tools to tackle a variety of problems!
 
 **Note:** For planning purposes, each PBpy exercise can take 1-2 hours to get through, depending on the topic and your skill level.
 
 #### <a name="learning-python"></a>"Learning Python, 5th Ed." by Mark Lutz
-This text is perhaps the most comprehensive resource for learning how Python works, and covers some advanced topics that aren't in any of the [Learning Python for the First Time](#learning-python) resources, such as interfacing Python with C/C++. This is of particular interest for engineers that work with embedded systems that require C/C++, or anyone that desires the computational power of C/C++ while keeping the ease of development in Python.
+This text is perhaps the most comprehensive resource for beginner Python users, and covers some topics that aren't in any of the [Learning Python for the First Time](#learning-python) resources, such as interfacing Python with C/C++. This is of particular interest for engineers that work with embedded systems that require C/C++, or anyone that desires the computational power of C/C++ while keeping the ease of development in Python.
 
 Since this book is an absolute behemoth of over 1,600 pages, I recommend it mainly as a companion reference for looking up concepts & examples that aren't explained thoroughly by any of the free resources. For even more exercises, Mark Lutz made his [live course materials](http://learning-python.com/training) available for free.
 
