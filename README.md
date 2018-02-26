@@ -117,7 +117,7 @@ Many people who start coding for the first time get stuck in the "trough of disi
 * It can be extended into C/C++ for embedded computing applications.
 
 ### <a name="beginner-novice"></a>Beginner-Novice
-Whether you're learning to code for the first time or an experienced programmer looking to add Python to your repertoir of languages, these resources will get you up and running quickly. The very first thing you'll want to do is download the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3, and start up an IDE of your choice for one of the resources below. I recommend _JupyterLab_.
+Whether you're learning to code for the first time or an experienced programmer looking to add Python to your repertoir of languages, these resources will get you up and running quickly. The very first thing you'll want to do is download the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3, and start up an IDE of your choice for one of the resources below. I recommend _JupyterLab_ or _Spyder_
 
 #### <a name="learning-python-for-the-first-time"></a>Learning Python for the First Time
 There are five main resources recommended by the Python community, all of them free. You only need to choose one and stick with it, but as we are all blessed with different minds, you'll want to try several to see which is more suited to your learning style. As my electrical engineering professor once told me, *"Find a voice that speaks to you."*
@@ -130,7 +130,7 @@ There are five main resources recommended by the Python community, all of them f
 
 All of them cover the basics of Python, but don't completely overlap with each other in the topics they cover. The main difference is that 1 & 2 get you off the ground faster, giving you the knowledge to start writing practical programs very quickly, while 3-5 take longer to get through, but are more comprehensive and focus on helping you build a solid foundation in Python. It's completely fine to go with one of the faster resources and fill in the gaps later when you can accommodate it.
 
-I like "Automate the Boring Stuff with Python" the best, which took me about 50 hours (and numerous tries) to get through. At some point you'll start to get the itch to write real programs — that's perfectly normal, and I encourage you to start applying what you've learned by writing your own scripts and programs. Finding problems and solving them with Python is the best way to get productive fast, rather than spending all your time reading and watching videos.
+I like "Automate the Boring Stuff with Python" the best, which took me about 50 hours (and numerous tries) to get through. At some point early on, you'll start to get the itch to write real programs. That's perfectly normal, and I encourage you to start applying what you've learned using a project-based approach — finding problems and solving them with Python is the best way to remember what you've learned so far, and ultimately get better at programming, rather than spending all your time reading and watching videos.
 
 The only resource I recommend avoiding is "Learn Python the Hard Way" by Zed Shaw, mainly because it's outdated.
 
@@ -150,7 +150,7 @@ Head into the [PB Python Archive](http://pbpython.com/archives.html) and start w
 
 **Note:** For planning purposes, each PBpy exercise can take 1-2 hours to get through, depending on the topic and your skill level.
 
-#### <a name="regex101"></a>"Regular Expressions 101" by Firas Dib
+#### <a name="regex101"></a>[Regular Expressions 101](https://regex101.com/) by Firas Dib
 Regular expressions are a powerful tool, but can be hard to dive into while learning Python. This regex tester and repository is a great resource that can get the regex you need into your Python applications, while also explaining how the specific regex works.
 
 #### <a name="learning-python"></a>"Learning Python, 5th Ed." by Mark Lutz
@@ -163,7 +163,10 @@ Since this book is an absolute behemoth of over 1,600 pages, I recommend it main
 ---
 
 ### <a name="intermediate-advanced"></a>Intermediate-Advanced
-By the time you've completed some programming projects on your own, you'll probably need some resources to reach the next skill level. These books will help correct some of the bad habits you've undoubtedly picked up while learning Python, and fill in any knowledge gaps while also delving into more advanced programming methods. "Fluent Python" is a solid and frequently recommended text that you can't go wrong with, but each of these books has something different to offer depending on what your learning goals are.
+By the time you've completed some programming projects on your own, you'll probably need some resources to reach the next skill level as a Python developer. The books in this section will help correct some of the bad habits you've undoubtedly picked up while learning Python, and fill in any knowledge gaps while also delving into more advanced programming methods. "Fluent Python" is a solid and frequently recommended text that you can't go wrong with, but each of these books has something different to offer depending on what your learning goals are.
+
+#### <a name="fullstackpython"></a>[Full Stack Python](https://www.fullstackpython.com/introduction.html)
+Full Stack Python is a landing point for intermediate Python learners looking for a specific focus or application. This open book includes a wealth of resources for getting into web development, data analysis, security, and application deployment, which can be helpful for coming up with projects and learning goals beyond mastering the language.
 
 #### <a name="fluent-python"></a>"Fluent Python: Clear, Concise, and Effective Programming" by Luciano Ramalho
 
@@ -174,6 +177,8 @@ By the time you've completed some programming projects on your own, you'll proba
 > Author of Effective Python here. I think they're very different books! David Beazley is awesome and a wonderful educator. He's always the best speaker at PyCon. I'd say: the _Cookbook_ is a powerful and thorough reference, the _Effective_ books are short and scenario driven.
 
 #### <a name="python-cookbook"></a>"Python Cookbook" by David Beazley and Brian K. Jones
+
+#### <a name="high-performance-python"></a>"High Performance Python: Practical Performant Programming for Humans" by Micha Gorelick and Ian Ozsvald
 
 #### <a name="hackers-guide-to-python"></a>"The Hacker's Guide to Python" by Julien Danjou
 
