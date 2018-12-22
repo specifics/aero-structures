@@ -116,6 +116,10 @@ This section assumes that you have zero programming knowledge. Your goal here is
 
 Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while... but after numerous tries and lots of encouragement from my friends, learning partners, and the Python community, I got past the rut and now routinely develop my own engineering tools. It has absolutely been worth all the effort — not only in the time Python has saved me, but also in the sense of accomplishment.
 
+Randall Munroe (xkcd) came up with a handy chart for figuring out whether or not it's worth spending your time automating a given task.
+
+[<img src="./images/is_it_worth_the_time_2x.png" width="618">](https://xkcd.com/1205/)
+
 ### <a name="why-python"></a>Why Python?
 * It's easy to learn and a great first coding language.
 * It's a mature language with a vibrant, active open-source community. There are thousands of useful libraries that tend to be well-documented.
