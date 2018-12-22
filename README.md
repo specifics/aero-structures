@@ -112,6 +112,8 @@ Documents of interest on various topics:
 
 This section assumes that you have zero programming knowledge. Your goal here is to go from `Hello world!` to what Chris Moffitt calls the ["plateau of productivity"](http://pbpython.com/plateau-of-productivity.html).
 
+[<img src="./images/hype-cycle.png" width="559">](http://pbpython.com/plateau-of-productivity.html)
+
 Many people who start coding for the first time get stuck in the "trough of disillusionment" stage of learning, and struggle to break out of it. I pushed a boulder up this same hill many times, only to fall back into the trough and give up for a while... but after numerous tries and lots of encouragement from my friends, learning partners, and the Python community, I got past the rut and now routinely develop my own engineering tools. It has absolutely been worth all the effort — not only in the time Python has saved me, but also in the sense of accomplishment.
 
 ### <a name="why-python"></a>Why Python?
