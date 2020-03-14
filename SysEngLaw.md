@@ -2,15 +2,15 @@
 
 <details open><summary><sup>Show</sup>/<sub>Hide</sub></summary><br/>
 
-__"The Unwritten Laws of Systems Engineering"__ by David F. McClinton was originally presented as a poster session at the Fourth Annual International Symposium of the National Council on Systems Engineering (NCOSE), which took place in San Jose, CA on August 10-12, 1994. It was later published in the symposium proceedings for reference by future engineers.
+__The Unwritten Laws of Systems Engineering__ by David F. McClinton was originally presented as a poster session at the Fourth Annual International Symposium of the National Council on Systems Engineering (NCOSE), which took place in San Jose, CA on August 10-12, 1994. It was later published in the symposium proceedings for reference by future engineers.
 
-As one of those engineers I found the article incredibly insightful, and many of the 'laws' resonated with me on multiple engineering projects in the defense & aerospace industry where I sent systems into the air and now into space. Despite its aerospace origins, you'll find that the laws apply to _any_ maintainable system — whether that system consists of physical hardware, or lines of code.
+As one of those engineers I found the article incredibly insightful, and many of the 'laws' resonated with me on multiple engineering projects in the defense & aerospace industry where I sent systems into the air and now into space. Despite its aerospace origins, you'll find that the laws apply to _any_ maintainable system — regardless of whether that system consists of physical hardware, or lines of code.
 
-The article's first known appearance on the internet was on a humble little engineering site called _Evan's Optical Engineering,_ which published the article verbatim in plain HTML. The page would remain unchanged for its entire life on that site, and was eventually featured in an _Engineering Commons_ podcast in 2015.
+The article first appeared on the internet in plain HTML sometime around 2004 on an obscure website called _Evan's Optical Engineering._ The page would remain unchanged for its entire life on that site, and was eventually featured in an _Engineering Commons_ podcast in 2015. I found it by pure coincidence one day in 2018 while searching for W.J. King's "The Unwritten Laws of Engineering".
 
-As of writing, the webpage is no longer accessible. Being a bit of an archivist, I was spurred into putting the article on github when I couldn't find it on another site. While unnecessary, the act of transcribing it here gives me peace of mind and if anything increases its exposure to those who may find the wisdom as valuable as I do.
+As of writing, that humble little webpage is no longer accessible. Being a bit of an archivist, I was spurred into replicating it on github when I couldn't find it on another site. Although probably unnecessary, the act of transcribing gave me peace of mind; and if anything someone else may discover these laws and find its wisdom as valuable as I do.
 
-The following is a verbatim copy of the original article with the author's emphasis preserved, but some liberties taken for headings, spacing, indents, and lists.
+The following is a verbatim copy of the original article with the author's emphasis preserved, but some liberties taken using markdown for readability and presentation.
 
 ~/github/specifics
 
@@ -33,7 +33,9 @@ David F. McClinton & Associates
 
 14181 Barlipi Circle., Sonora, CA 95370
 
-__Abstract.__ The paper states some of the unwritten but spoken laws that abount in any engineering project. The laws are really simple basic truths that arise in typical engineering discussions. We didn't hear them in engineering school but they came through loud and clear in that school of hard knocks, the engineering project. The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
+### Abstract
+
+The paper states some of the unwritten but spoken laws that abount in any engineering project. The laws are really simple basic truths that arise in typical engineering discussions. We didn't hear them in engineering school but they came through loud and clear in that school of hard knocks, the engineering project. The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
 
 ## INTRODUCTION
 
@@ -65,7 +67,7 @@ The third law deals with trade studies and the whole act of system synthesis. Ne
 
 The following laws treat the various lower level considerations that support the three laws above. Maybe they are not laws but only simple truths. These simple truths are what guide up along the systems engineering process.
 
-### Configration Management
+### Configuration Management
 
 The requirements derivation process is the area where we seem to fail the most. Once requirements are settled and under Configration Management there will be many attempts to change the requirements. Requirements drift is caused by both the customer and contractor. Customers love to add features in an attempt to sell their program. Contractor design engineers love to improve the performance of the system. Either way, if left unchecked, they both can kill the program due to cost, complexity, and delay.
 
