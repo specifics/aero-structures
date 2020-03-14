@@ -35,7 +35,7 @@ David F. McClinton & Associates
 
 ### Abstract
 
-The paper states some of the unwritten but spoken laws that abount in any engineering project. The laws are really simple basic truths that arise in typical engineering discussions. We didn't hear them in engineering school but they came through loud and clear in that school of hard knocks, the engineering project. The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
+The paper states some of the unwritten but spoken laws that abound in any engineering project. The laws are really simple basic truths that arise in typical engineering discussions. We didn't hear them in engineering school but they came through loud and clear in that school of hard knocks, the engineering project. The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
 
 ## INTRODUCTION
 
@@ -109,7 +109,7 @@ The Eighth Law:
 
 ### Allocation of Resources
 
-It is easy to overdo the documentation process or any other part of the system engineering process. Since we do not have unlimited sources, it is vital that resources are allocated to the critical tasks and not spent on tasks that become the playground of the analyst and designers.
+It is easy to overdo the documentation process or any other part of the system engineering process. Since we do not have unlimited resources, it is vital that resources are allocated to the critical tasks and not spent on tasks that become the playground of the analyst and designers.
 
 The Ninth Law:
 
@@ -215,7 +215,7 @@ The Twenty First Law:
 
 ### Systems Management Risk
 
-The systems engineering management of a large project is very difficult in the start up phase. Requirements are late. Of course they are late but engineering should never use that as an excuse and fault to conduct parametric analysis around the expected requirement limits. Staffing is under the planned level. Design engineering is yelling for firm requirements as if the system engineer knows what the requirements are but just won't tell. The result is that the Chief Systems Engineer is under fire and may be replaced by a new person who is given a new longer schedule and increased budget and perhaps reduced expectation of results. This typical half life of one year makes some people cautious.
+The systems engineering management of a large project is very difficult in the start up phase. Requirements are late. Of course they are late but engineering should never use that as an excuse and fail to conduct parametric analysis around the expected requirement limits. Staffing is under the planned level. Design engineering is yelling for firm requirements as if the system engineer knows what the requirements are but just won't tell. The result is that the Chief Systems Engineer is under fire and may be replaced by a new person who is given a new longer schedule and increased budget and perhaps reduced expectation of results. This typical half life of one year makes some people cautious.
 
 The Twenty Second Law:
 
@@ -255,7 +255,7 @@ Have we cut the oral tradition of passing these truths dow to our junior members
 
 David F. McClinton has over thirty years direct systems enginering and project management experience. He has provided consulting services to Telecom Australia, Marconi U.K. and the Australian Commonwealth Department of Defence on OTH Radar and other Commonwealth Programs. He has consulted in Saudi Arabia on Air Traffic Control. He has conducted System Engineering Process seminars to Telecom Australia; Melbourne Royal Institute of Technology; New South Wales State Rail; University of Adelaide; the Australian Department of Defence; Caltech; and Universities.
 
-Mr. McClinton was for many year a Chief Systems Engineer at Lockheed Missiles & Space Co. He holds a B.S. degree from UCLA.
+Mr. McClinton was for many years a Chief Systems Engineer at Lockheed Missiles & Space Co. He holds a B.S. degree from UCLA.
 
 ---
 
