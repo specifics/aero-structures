@@ -8,9 +8,9 @@ As one of those engineers I found the article incredibly insightful, and many of
 
 The article's first known appearance on the internet was on a humble little engineering site called _Evan's Optical Engineering,_ which published the article verbatim in plain HTML. The page would remain unchanged for its entire life on that site, and was eventually featured in an _Engineering Commons_ podcast in 2015.
 
-As of writing, the original webpage is no longer accessible. Being a bit of an archivist, I was spurred into putting the article on github when I couldn't find another site with the same article. While unnecessary, the act of writing it out gives me peace of mind and if anything increases its exposure to those who may find the wisdom as valuable as I do.
+As of writing, the webpage is no longer accessible. Being a bit of an archivist, I was spurred into putting the article on github when I couldn't find it on another site. While unnecessary, the act of transcribing it here gives me peace of mind and if anything increases its exposure to those who may find the wisdom as valuable as I do.
 
-The following is a verbatim copy of the original article, with emphasis by the author preserved, but some liberties taken for headings, spacing, indents, and lists.
+The following is a verbatim copy of the original article with the author's emphasis preserved, but some liberties taken for headings, spacing, indents, and lists.
 
 ~/github/specifics
 
@@ -33,7 +33,7 @@ David F. McClinton & Associates
 
 14181 Barlipi Circle., Sonora, CA 95370
 
-__Abstract.__ The paper states some of the unwritten but spoken laws that abount in any engineering project. The laws are really simple basic truths taht arise in typical engineering discussions. We didn't hear them in engineering school but they cam through loud and clear in that school of hard knocks, the engineering project.  The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
+__Abstract.__ The paper states some of the unwritten but spoken laws that abount in any engineering project. The laws are really simple basic truths that arise in typical engineering discussions. We didn't hear them in engineering school but they came through loud and clear in that school of hard knocks, the engineering project. The initial three laws are (1) Everything interacts with everything else; (2) Everything goes somewhere; and (3) There is no such thing as a free lunch. Several other laws capture the lessons learned in various activities in the systems engineering process.
 
 ## INTRODUCTION
 
@@ -49,11 +49,17 @@ Many such laws relating to Systems Engineering come to mind for the various acti
 
 1. __There is no such thing as a free lunch.__
 
-__Decomposition.__ The first law seems to be at odds with the principle of decomposition where we decompose a large complicated problem into a number of smaller complicated problems and so on until we have reduced the problem to a managable size where a few people can get around the problem. The idea is to break things apart at simple and clean interfaces so that after solving the piece parts we can assemble things in a simple and easy manner into a final solution. Decomposing systems in the simplest way is an art but we should not forget that impacts ripple throughout the system and can never be ignored.
+### Decomposition
 
-__Interfaces.__ The second law deals with the multple interfaces we have exposed in the decomposition. The interfaces have to be consistent and account for all the things generated like control signals, communications, as well as thermal loads, EMI, power spikes, etc. We must account for everything at the interface and follow where it goes. If it leaves some place, then it must arrive someplace else.
+The first law seems to be at odds with the principle of decomposition where we decompose a large complicated problem into a number of smaller complicated problems and so on until we have reduced the problem to a managable size where a few people can get around the problem. The idea is to break things apart at simple and clean interfaces so that after solving the piece parts we can assemble things in a simple and easy manner into a final solution. Decomposing systems in the simplest way is an art but we should not forget that impacts ripple throughout the system and can never be ignored.
 
-__Trade Studies.__ The third law deals with trade studies and the whole act of system synthesis. Never become so enamored with a design decsision that you forget the down side of that decision. This third law is the law of decision analysis.
+### Interfaces
+
+The second law deals with the multple interfaces we have exposed in the decomposition. The interfaces have to be consistent and account for all the things generated like control signals, communications, as well as thermal loads, EMI, power spikes, etc. We must account for everything at the interface and follow where it goes. If it leaves some place, then it must arrive someplace else.
+
+### Trade Studies
+
+The third law deals with trade studies and the whole act of system synthesis. Never become so enamored with a design decsision that you forget the down side of that decision. This third law is the law of decision analysis.
 
 ## THE SIMPLE TRUTHS
 
@@ -61,137 +67,181 @@ The following laws treat the various lower level considerations that support the
 
 ### Configration Management
 
-The requirements derivation process is the are where we seem to fail the most. Once requirements are settled and under Configration Management there will be many attempts to change the requirements. Requirements drift is caused by both the customer and contractor. Customers love to add features in an attempt to sell their program. Contractor design engineers love to improve the performance of the system. Either way, if left unchecked, they both can kill the program due to cost, complexity, and delay. The Fourth Law:
+The requirements derivation process is the area where we seem to fail the most. Once requirements are settled and under Configration Management there will be many attempts to change the requirements. Requirements drift is caused by both the customer and contractor. Customers love to add features in an attempt to sell their program. Contractor design engineers love to improve the performance of the system. Either way, if left unchecked, they both can kill the program due to cost, complexity, and delay.
 
-* Never confuse change with progress.
+The Fourth Law:
+
+* __Never confuse change with progress.__
 
 ### Functional Analysis
 
-Functional analysis is conducted in order to understand the mission need and the things the system must perform. Different people performing a functional analysis will produce different functional decompositions and they can all be right. Most functional decompositions become convoluted and messy. As you work at lower levels, you start to understand the fucntions at the higher levels and wish that you had done it some other way. The Fifth Law:
+Functional analysis is conducted in order to understand the mission need and the things the system must perform. Different people performing a functional analysis will produce different functional decompositions and they can all be right. Most functional decompositions become convoluted and messy. As you work at lower levels, you start to understand the functions at the higher levels and wish that you had done it some other way.
 
-* Never be afraid to start over.
+The Fifth Law:
+
+* __Never be afraid to start over.__
 
 ### Failure-to-Commit
 
-Once you have the requirements defined and their ties to the functional decomposition, failure-to-commit sets in. Never try to be completely right (analysis paralysis) or you will never converge on anything. Failure-to-commit stops progress in its tracks. Don't try to make everything perfect. The Sixth Law:
+Once you have the requirements defined and their ties to the functional decomposition, failure-to-commit sets in. Never try to be completely right (analysis paralysis) or you will never converge on anything. Failure-to-commit stops progress in its tracks. Don't try to make everything perfect.
 
-* Better is the enemy of good.
+The Sixth Law:
+
+* __Better is the enemy of good.__
 
 ### Engineering Documentation
 
-Development of engineering documentation is essential in the system engineering process. Trade studies must be documented and referenced as the development process proceeds. Remember what Sam Goldwyn said: "a verbal agreement is not worth the paper it's written on." Force the documentation process. Schedule and assign engineering memos on analyses and trades that you know will be needed. The Seventh Law:
+Development of engineering documentation is essential in the system engineering process. Trade studies must be documented and referenced as the development process proceeds. Remember what Sam Goldwyn said: "a verbal agreement is not worth the paper it's written on." Force the documentation process. Schedule and assign engineering memos on analyses and trades that you know will be needed.
 
-* If it is not written down, it never happened.
+The Seventh Law:
+
+* __If it is not written down, it never happened.__
 
 ### Planning Documentation
 
-The development of the system concept into a baseline and the development of plans and related documentation is a massive workload. Similar documentation from earlier programs can be the basis or form a template for the new documentation. The Eighth Law:
+The development of the system concept into a baseline and the development of plans and related documentation is a massive workload. Similar documentation from earlier programs can be the basis or form a template for the new documentation.
 
-* Never be above plagiarism.
+The Eighth Law:
+
+* __Never be above plagiarism.__
 
 ### Allocation of Resources
 
-It is easy to overdo the documentation process or any other part of the system engineering process. Since we do not have unlimited sources, it is vital that resources are allocated to the critical tasks and not spent on tasks that become the playground of the analyst and designers. The Ninth Law:
+It is easy to overdo the documentation process or any other part of the system engineering process. Since we do not have unlimited sources, it is vital that resources are allocated to the critical tasks and not spent on tasks that become the playground of the analyst and designers.
 
-* A thing not worth doing is not worth doing well.
+The Ninth Law:
+
+* __A thing not worth doing is not worth doing well.__
 
 ### System Synthesis
 
-We are finding more and more projects where cost is king. We are asked to build everything out of existing components. Of course increased performance usually means old technologies might not satisfy and finding something off-the-shelf just might not happen. The Tenth Law:
+We are finding more and more projects where cost is king. We are asked to build everything out of existing components. Of course increased performance usually means old technologies might not satisfy and finding something off-the-shelf just might not happen.
 
-* There is no shelf.
+The Tenth Law:
+
+* __There is no shelf.__
 
 ### System Integration
 
-The main premise of system engineering is that a large complex problem can be decomposed into a set of smaller, simpler problems exposing interfaces that tie the smaller blocks together. Interface configuration management is required to maintain agreed-to interfaces. This management activity is required throughout the lifetime of the project. The Eleventh Law:
+The main premise of system engineering is that a large complex problem can be decomposed into a set of smaller, simpler problems exposing interfaces that tie the smaller blocks together. Interface configuration management is required to maintain agreed-to interfaces. This management activity is required throughout the lifetime of the project.
 
-* Any interface left to itself will sour.
+The Eleventh Law:
+
+* __Any interface left to itself will sour.__
 
 ### Work Planning
 
-There is work, non-work, and un-work. Work is applied against the planned activities. Non-work is work performed by the non producers and is inevitable in any large project. Non-work does not hurt any other task except for those that need the results of that effort. We can always pick up the ball and do that needed work. The killer that must be purged is the un-work or work that must be scrapped and redone. Any fool can design anything given unlimited budget, time and talented workfoace. The project of project management is to accomplish much with little. The Twelfth Law:
+There is work, non-work, and un-work. Work is applied against the planned activities. Non-work is work performed by the non producers and is inevitable in any large project. Non-work does not hurt any other task except for those that need the results of that effort. We can always pick up the ball and do that needed work. The killer that must be purged is the un-work or work that must be scrapped and redone. Any fool can design anything given unlimited budget, time and talented workforce. The challenge of project management is to accomplish much with little.
 
-* Plan your work and work your plan.
+The Twelfth Law:
+
+* __Plan your work and work your plan.__
 
 ### Contingency Planning
 
-In our planning, we tend to be optimistic and set work spans as if we were going to do the task with our set way of doing things. When the job is assigned to someone else, it always takes longer than we planned. The assigned task is perceived as being more complicated than we imagine. Almost always, rework is required. Our schedules should recgonize contingencies. The Thirteenth Law:
+In our planning, we tend to be optimistic and set work spans as if we were going to do the task with our set way of doing things. When the job is assigned to someone else, it always takes longer than we planned. The assigned task is perceived as being more complicated than we imagine. Almost always, rework is required. Our schedules should recgonize contingencies.
 
-* We dont have time to do it right but we have time to do it twice.
+The Thirteenth Law:
+
+* __We dont have time to do it right but we have time to do it twice.__
 
 ### Assignment of Tasks
 
-Tasks will be complicated because of the difficulty in making udnerstood the scope of the assignment. When we want something simple and accomplished in a few hours, it is often seen as a very difficult task.
+Tasks will be complicated because of the difficulty in making understood the scope of the assignment. When we want something simple and accomplished in a few hours, it is often seen as a very difficult task.
 
-* Nothing is impossible to the man who doesn't have to do it.
+The Fourteenth Law
+
+* __Nothing is impossible to the man who doesn't have to do it.__
 
 ### The Problem of Make Work
 
-Make work is wasted effort that is best directed elsewhere. Always make sure your tasks are directed toward an end goal that is a common vision of the workforce. It is easy to keep refining the design when the basic design itself is faulty. A task without value added to the probject can not be tolerated. The Fifteenth Law:
+Make work is wasted effort that is best directed elsewhere. Always make sure your tasks are directed toward an end goal that is a common vision of the workforce. It is easy to keep refining the design when the basic design itself is faulty. A task without value added to the project can not be tolerated.
 
-* Don't keep polishing the cannon ball but do get the caliber right.
+The Fifteenth Law:
+
+* __Don't keep polishing the cannon ball but do get the caliber right.__
 
 ### Design Validation
 
-Validation of the design against requirements may be based on analysis or test. The credibility of that result is always a problem. A test is always better if youcan afford the expense. The Sixteenth Law:
+Validation of the design against requirements may be based on analysis or test. The credibility of that result is always a problem. A test is always better if you can afford the expense.
 
-* Any analysis will be believed by no one but the analyst who conducted it.
+The Sixteenth Law:
 
-* Any test will be believed by every one bu the person who conducted it.
+* __Any analysis will be believed by no one but the analyst who conducted it.__
+
+* __Any test will be believed by every one but the person who conducted it.__
 
 ### Performance Verification
 
-We set the scope and range of tests to gain confidence in the ability of a system to meet requirements set by the mission need. We always have arguments that we are over testing and wasting time and money. The Seventeeth Law:
+We set the scope and range of tests to gain confidence in the ability of a system to meet requirements set by the mission need. We always have arguments that we are over testing and wasting time and money.
 
-* One test is worth a thousand expert opinions.
+The Seventeeth Law:
+
+* __One test is worth a thousand expert opinions.__
 
 ### Test Planning
 
-The subject of test philosophy reveals another law. Never perform a test just because it seems like a good idea. It has to be needed to validate a requirement. The Eighteenth Law:
+The subject of test philosophy reveals another law. Never perform a test just because it seems like a good idea. It has to be needed to validate a requirement.
 
-* Never conduct a test if you can't live with all possible results.
+The Eighteenth Law:
+
+* __Never conduct a test if you can't live with all possible results.__
 
 ### Time Management
 
-Attending meetings seem to be a major undertaking. Push your position at the time. Later study and analysis may prove you right but events have moved on and passed you by. Poor time management can dilute the best laid plans. The Nineteeth Law:
+Attending meetings seem to be a major undertaking. Push your position at the time. Later study and analysis may prove you right but events have moved on and passed you by. Poor time management can dilute the best laid plans.
 
-* After all is said and done, a lot is said and very little is done.
+The Nineteeth Law:
+
+* __After all is said and done, a lot is said and very little is done.__
 
 ### Briefing Chart Complexity
 
-Briefing charts seem to be one of our most cherished products. Follow the KISS principle (Keep it simple stupid). Don't dump a complex chart on your audience when a couple of simple charts will do. The Twentieth Law:
+Briefing charts seem to be one of our most cherished products. Follow the KISS principle (Keep it simple stupid). Don't dump a complex chart on your audience when a couple of simple charts will do.
 
-* Never have more than ten blocks in your block diagram.
+The Twentieth Law:
+
+* __Never have more than ten blocks in your block diagram.__
 
 ### Briefing Technique
 
-Word charts are boring and most of your audience can read anyway. You can say anything you want with a picture chart. The Tenty First Law:
+Word charts are boring and most of your audience can read anyway. You can say anything you want with a picture chart.
 
-* Never use a word chart when a picture chart will do.
+The Twenty First Law:
+
+* __Never use a word chart when a picture chart will do.__
 
 ### Systems Management Risk
 
-The systems engineering management of a large project is very difficult in the start up phase. Requirements are late. Of course they are late but engineering should never use that as an exucse and fault to conduct parametric analysis around the expected requirement limits. STaffing is under the planned level. Design engineering is yelling for firm requirements as if the system engineer knows what the requirements are but just won't tell. The result is that the Chief Systems Engineer is under fire and may be replaced by a new person who is given a new longer schedule and increased budget and perhaps reduced expectation of results. This typical half life of one year makes some people cautious. The Twenthy Second Law:
+The systems engineering management of a large project is very difficult in the start up phase. Requirements are late. Of course they are late but engineering should never use that as an excuse and fault to conduct parametric analysis around the expected requirement limits. Staffing is under the planned level. Design engineering is yelling for firm requirements as if the system engineer knows what the requirements are but just won't tell. The result is that the Chief Systems Engineer is under fire and may be replaced by a new person who is given a new longer schedule and increased budget and perhaps reduced expectation of results. This typical half life of one year makes some people cautious.
 
-* Never go in with the first wave.
+The Twenty Second Law:
+
+* __Never go in with the first wave.__
 
 ### More Risk
 
-It is not clear that you can succeed if you are part of the second wave. Some projects are so difficult that an extension of the law is as follows: The Twenty Third Law:
+It is not clear that you can succeed if you are part of the second wave. Some projects are so difficult that an extension of the law is as follows:
 
-* Never go in with the second wave either.
+The Twenty Third Law:
+
+* __Never go in with the second wave either.__
 
 ### Management Style
 
-You need a management style with a firm manner and that gives the appearance that you know which way to lead. Hang tough. The Twenty Fourth Law:
+You need a management style with a firm manner and that gives the appearance that you know which way to lead. Hang tough.
 
-* Have the heart of a child but keep it in a jar on your desk.
+The Twenty Fourth Law:
+
+* __Have the heart of a child but keep it in a jar on your desk.__
 
 ### Legal Conflict
 
-Finally, you should remember that as a system engineer you can be liable for damages if your system should fail. Don't spend time on lawyer bashing. Just remember the guidelines of any legal conflict. The Twenty Fifth Law:
+Finally, you should remember that as a system engineer you can be liable for damages if your system should fail. Don't spend time on lawyer bashing. Just remember the guidelines of any legal conflict.
 
-* Deny everything, admit nothing, demand proof, and reject the proof.
+The Twenty Fifth Law:
+
+* __Deny everything, admit nothing, demand proof, and reject the proof.__
 
 ## CONCLUSION
 
