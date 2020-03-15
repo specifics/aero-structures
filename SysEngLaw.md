@@ -145,7 +145,7 @@ In our planning, we tend to be optimistic and set work spans as if we were going
 
 The Thirteenth Law:
 
-* __We dont have time to do it right but we have time to do it twice.__
+* __We don't have time to do it right but we have time to do it twice.__
 
 ### Assignment of Tasks
 
@@ -247,9 +247,9 @@ The Twenty Fifth Law:
 
 ## CONCLUSION
 
-The application of these twenty-five laws surfaces almost every day in the normal process of systems engineering. They are triggered in the day-to-day events are are a memory response to their basic truths. They may make you stop and think.
+The application of these twenty-five laws surfaces almost every day in the normal process of systems engineering. They are triggered in the day-to-day events and are a memory response to their basic truths. They may make you stop and think.
 
-Have we cut the oral tradition of passing these truths dow to our junior members? I don't think so. I hear a different one stated everytime a new proejct forms and people start the systems engineering process once again.
+Have we cut the oral tradition of passing these truths down to our junior members? I don't think so. I hear a different one stated everytime a new project forms and people start the systems engineering process once again.
 
 ## ABOUT THE AUTHOR
 
